@@ -32,7 +32,7 @@ messageContentParts.Add(ChatMessageContentPart.CreateTextPart("using the image h
 messageContentParts.Add(ChatMessageContentPart.CreateTextPart("Do both these images show the same object? If not describe 3 differences in bullet points"));
 messages.Add(new UserChatMessage(messageContentParts));
 
-//IF you comment the lines with the urls thatn you will see that usage starts showing up.
+//IF you comment the lines with the urls  usage starts showing up.
 await foreach (StreamingChatCompletionUpdate message in chatClient.CompleteChatStreamingAsync(messages))
 {
     if (message.Usage != null)
